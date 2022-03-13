@@ -1,0 +1,25 @@
+GET http://localhost:3000/api/page/1
+
+###
+POST http://localhost:3000/api
+Content-Type: application/json
+
+{
+    "title": "Product 10",
+    "price": 1000
+}
+
+###
+GET http://localhost:3000/api/1
+
+###
+PUT http://localhost:3000/api/1
+Content-Type: application/json
+
+{
+    "title": "Product Update ",
+    "price": 5000
+}
+
+###
+DELETE http://localhost:3000/api/1
