@@ -1,13 +1,13 @@
 const express = require('express');
-const { getAllProducts, createdProducts, getProductById, updateProduct, deleteProduct } = require('../controllers/Product.js');
+const Controller = require('../controllers/Autoload.js');
 
 const router = express.Router();
 
-router.get('/', getAllProducts);
-router.get('/page/:page', getAllProducts);
-router.get('/:id', getProductById);
-router.post('/', createdProducts);
-router.put('/:id', updateProduct);
-router.delete('/:id', deleteProduct);
+router.get('/', Controller.Product.getAllProducts);
+router.get('/page/:page', Controller.Product.getAllProducts);
+router.get('/:id', Controller.Product.getProductById);
+router.post('/', Controller.Product.createdProducts);
+router.put('/:id', Controller.Product.updateProduct);
+router.delete('/:id', Controller.Product.deleteProduct);
 
 module.exports = router;
